@@ -12,7 +12,7 @@ def encode_onehot(labels):
     return labels_onehot
 
 
-def load_data(path="../data/cora/", dataset="cora"):
+def load_data(path="data/cora/", dataset="cora"):
     """Load citation network dataset (cora only for now)"""
     print('Loading {} dataset...'.format(dataset))
 
@@ -49,7 +49,8 @@ def load_data(path="../data/cora/", dataset="cora"):
     idx_train = torch.LongTensor(idx_train)
     idx_val = torch.LongTensor(idx_val)
     idx_test = torch.LongTensor(idx_test)
-
+    print('Data loaded.')
+	
     return adj, features, labels, idx_train, idx_val, idx_test
 
 
